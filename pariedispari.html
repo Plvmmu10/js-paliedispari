@@ -11,10 +11,47 @@
         integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/style.css">
-    <title>Odd or Even</title>
+    <title>Even or Odd</title>
 </head>
-<body>
+<body class="bg-secondary">
+    <main class="bg-danger w-75 m-auto text-white text-center mt-5">
+        <div class="mb-5">
+            <h1>Gioca a pari o dispari!</h1>
+            <h4 class="fst-italic text-decoration-underline">Scegli se giocare pari o dispari e dopo seleziona il tuo numero</h4>
+            <div class="py-3">
+                <label for="oddOrEven">Scegli pari o dispari</label>
+                <select name="oddOrEven" id="oddOrEvenSelect">
+                    <option value="even">Pari</option>
+                    <option value="odd">Dispari</option>
+                </select>
+            </div>
 
+            <div>
+                <label for="number">Scegli un numero</label>
+                <select name="number" id="numberSelect">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            
+            <button class="btn btn-warning" id="gameBtn">Gioca</button>
+            <div class="resultWrapper d-flex justify-content-center">
+                <div class="bg-white mt-5 w-50 d-flex flex-column">
+                    <div id="sumResult" class=""></div>
+                    <div id="oddOrEvenResult" class=""></div>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="p-5">
+            <h4>Curiosità sul pari o dispari</h4>
+            <p>Pari o dispari (talvolta indicato come Pari e dispari o Bim... bum... bam!) è un gioco di mano simile a una morra semplificata. Viene spesso usato come strumento di sorteggio fra due contendenti, con funzione analoga a testa o croce o a una conta, per esempio per stabilire a chi tocca il primo turno in un gioco con due contendenti o due squadre. Nel linguaggio comune, "fare pari o dispari", o "fare bim bum bam", sono entrati nell'uso come modi figurati per dire "tirare a caso".</p>
+        </div>
+    </main>
 
 
     <script src="./js/script.js"></script>
