@@ -7,7 +7,10 @@ const word = document.getElementById('wordInput');
 
 const palBtn = document.getElementById('palBtn');
 
-palBtn.addEventListener('click',checkPalindrome);
+if (palBtn != null){
+    palBtn.addEventListener('click',checkPalindrome);
+}
+
 
 
 // function to check if a string is palindrome
@@ -36,33 +39,35 @@ function checkPalindrome (){
 
 // select values
 const gameBtn = document.getElementById('gameBtn');
-gameBtn.addEventListener('click', function(){
-    let oddOrEvenSelect = document.getElementById('oddOrEvenSelect');
-    let numberSelect = document.getElementById('numberSelect');
 
-    let userNumber = parseInt(numberSelect.value);
-    let userOddOrEven = oddOrEvenSelect.value;
-    let computerNumber = rndNumber(1,5);
-    let result = document.getElementById('oddOrEvenResult');
-    let sumResult = document.getElementById('sumResult');
-
-    let totalResult = sumNumbers(userNumber,computerNumber);
+if (gameBtn != null){
+    gameBtn.addEventListener('click', function(){
+        let oddOrEvenSelect = document.getElementById('oddOrEvenSelect');
+        let numberSelect = document.getElementById('numberSelect');
     
-    if ((userOddOrEven === "even") && (totalResult % 2 === 0)){
-        sumResult.innerHTML = `<h3 class="text-black">E' uscito il numero ${totalResult}</h3>`
-        result.innerHTML = `<h2 class="text-success">Hai Vinto</h2>`
-
-    }else if ((userOddOrEven === "odd") && (totalResult % 2 === 1)){
-        sumResult.innerHTML = `<h3 class="text-black">E' uscito il numero ${totalResult}</h3>`
-        result.innerHTML = `<h2 class="text-success">Hai Vinto</h2>`
-
-    }else{
-        sumResult.innerHTML = `<h3 class="text-black">E' uscito il numero ${totalResult}</h3>`
-        result.innerHTML = `<h2 class="text-danger">Hai Perso</h2>`
-    }
+        let userNumber = parseInt(numberSelect.value);
+        let userOddOrEven = oddOrEvenSelect.value;
+        let computerNumber = rndNumber(1,5);
+        let result = document.getElementById('oddOrEvenResult');
+        let sumResult = document.getElementById('sumResult');
     
-})
-
+        let totalResult = sumNumbers(userNumber,computerNumber);
+        
+        if ((userOddOrEven === "even") && (totalResult % 2 === 0)){
+            sumResult.innerHTML = `<h3 class="text-black">E' uscito il numero ${totalResult}</h3>`
+            result.innerHTML = `<h2 class="text-success">Hai Vinto</h2>`
+    
+        }else if ((userOddOrEven === "odd") && (totalResult % 2 === 1)){
+            sumResult.innerHTML = `<h3 class="text-black">E' uscito il numero ${totalResult}</h3>`
+            result.innerHTML = `<h2 class="text-success">Hai Vinto</h2>`
+    
+        }else{
+            sumResult.innerHTML = `<h3 class="text-black">E' uscito il numero ${totalResult}</h3>`
+            result.innerHTML = `<h2 class="text-danger">Hai Perso</h2>`
+        }
+        
+    })
+}
 
 function sumNumbers(num1, num2){
     return num1 + num2;
